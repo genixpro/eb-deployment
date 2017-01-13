@@ -1,0 +1,17 @@
+{
+  "name": "demo",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "This role is for an all in one Electric Brain demo server. Demo servers automatically clear their database regularly.",
+  "run_list": [
+    "recipe[electricbrain::access]",
+    "recipe[electricbrain::tools]",
+    "recipe[electricbrain::torch]",
+    "recipe[electricbrain::db]",
+    "recipe[rabbitmq::default]",
+    "recipe[rabbitmq::mgmt_console]",
+    "recipe[electricbrain::node]",
+    "recipe[electricbrain::api]",
+    "recipe[electricbrain::demo]"
+  ]
+}

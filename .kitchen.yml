@@ -1,0 +1,24 @@
+
+---
+driver:
+  name: vagrant
+  network:
+    - ["forwarded_port", {guest: 3891, host: 3891}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+
+verifier:
+  name: inspec
+
+suites:
+  - name: electricbrain
+    run_list:
+      - role[db]
+      - role[api]
+    verifier:
+      inspec_tests:
+        - test/recipes

@@ -1,0 +1,15 @@
+{
+  "name": "api",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "This role is for the Electric Brain API server. For now, the API server also serves the frontend, although that may change at some point.",
+  "run_list": [
+    "recipe[electricbrain::access]",
+    "recipe[electricbrain::tools]",
+    "recipe[electricbrain::torch]",
+    "recipe[rabbitmq::default]",
+    "recipe[rabbitmq::mgmt_console]",
+    "recipe[electricbrain::node]",
+    "recipe[electricbrain::api]"
+  ]
+}

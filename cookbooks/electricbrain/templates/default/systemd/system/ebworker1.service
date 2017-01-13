@@ -1,0 +1,11 @@
+[Unit]
+Description=Electric Brain Worker 1
+
+[Service]
+Environment=
+WorkingDirectory=/opt/eb/
+ExecStart=/usr/local/bin/ebworker
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

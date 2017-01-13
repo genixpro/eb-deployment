@@ -1,0 +1,7 @@
+cookbook 'ssh_authorized_keys', '~> 0.3.0'
+cookbook 'nodejs', '~> 2.4.4'
+cookbook 'mercurial', '~> 2.0.4'
+cookbook 'mongodb3', '~> 5.2.0'
+cookbook 'rabbitmq', '~> 4.10.0'
+
+

@@ -1,0 +1,11 @@
+[Unit]
+Description=Electric Brain API
+
+[Service]
+Environment=
+WorkingDirectory=/opt/eb/
+ExecStart=/usr/local/bin/ebapi
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
